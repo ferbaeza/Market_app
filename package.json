@@ -1,0 +1,23 @@
+{
+  "name": "zero_app",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon ./src/main.js",
+    "start": "node src/main.js",
+    "prettier": "prettier --check ./",
+    "prettier:write": "prettier --write ./"
+  },
+
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1"
+  }
+}
