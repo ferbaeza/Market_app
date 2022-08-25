@@ -17,6 +17,9 @@ fs.readdirSync(PATH).filter((files)=>{
     if(files !=='main.js'){
         console.log(`App: ${files} is using ./${files}/routes`)
         app.use(`/${files}`, require(`./${files}/routes/index`))
+        app.use(express.static(path.join(__dirname,`${files}/public`)));
+        app.use(express.static(path.join(__dirname,`${files}/docs`)));
+
     }
 })
 //Routes
