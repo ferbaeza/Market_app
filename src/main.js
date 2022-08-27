@@ -9,19 +9,18 @@ const PATH= __dirname
 const PORT = process.env.PORT
 
 
-// const homePath = path.basename(__dirname)
-// console.log(homePath)
 
 //Paths
 fs.readdirSync(PATH).filter((files)=>{
-    if(files !=='main.js'){
-        console.log(`App: ${files} is using ./${files}/routes`)
+    if(files !=='main.js' && files!=='public' ){
+        console.log(`App name is ${files}`)
         app.use(`/${files}`, require(`./${files}/routes/index`))
-        app.use(express.static(path.join(__dirname,`${files}/public`)));
-        app.use(express.static(path.join(__dirname,`${files}/docs`)));
-
     }
 })
+
+//Static Files
+app.use(express.static(path.join(__dirname,'public')));
+
 //Routes
 //app.use('/blog', require('./blog/routes/index'))
 app.use('/', require('./core/routes/home'))
@@ -33,5 +32,5 @@ app.use(express.json())
 
 app.set('port', PORT || 5000)
 app.listen(PORT, ()=>{{
-    console.log(`Server running on port ${PORT}`)
+    console.log(`\n###  ###  ###\n##   #    ##\n#    ###  # #\n\nServer running on port ${PORT}`)
 }})
