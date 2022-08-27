@@ -12,7 +12,7 @@ const PORT = process.env.PORT
 
 //Paths
 fs.readdirSync(PATH).filter((files)=>{
-    if(files !=='main.js' && files!=='public' ){
+    if(files !=='main.js' && files!=='public' && files!=='app' ){
         console.log(`App name is ${files}`)
         app.use(`/${files}`, require(`./${files}/routes/index`))
     }
@@ -32,5 +32,5 @@ app.use(express.json())
 
 app.set('port', PORT || 5000)
 app.listen(PORT, ()=>{{
-    console.log(`\n###  ###  ###\n##   #    ##\n#    ###  # #\n\nServer running on port ${PORT}`)
+    console.log(`\n###  ###  ###\n##  ###   ###\n#    ###  # #\n\nServer running on port ${PORT}`)
 }})
