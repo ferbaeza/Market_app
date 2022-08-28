@@ -18,7 +18,7 @@ class App extends Component {
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                   <li class="nav-item">
-                    <a class="nav-link" href="">Blog</a>
+                    <a class="nav-link" href="./blog/home">Blog</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="">Home</a>

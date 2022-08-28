@@ -33,4 +33,5 @@ app.use(express.json())
 app.set('port', PORT || 5000)
 app.listen(PORT, ()=>{{
     console.log(`\n###  ###  ###\n##  ###   ###\n#    ###  # #\n\nServer running on port ${PORT}`)
+    console.log(`Open in http://localhost:${PORT}`)
 }})
